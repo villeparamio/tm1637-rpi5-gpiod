@@ -7,7 +7,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
     name='tm1637-rpi5-gpiod',
-    version='1.0.0',
+    version='2.0.0',
     description='TM1637 4-digit display driver for Raspberry Pi 5 using gpiod',
     long_description=long_description,
     long_description_content_type='text/markdown',

@@ -8,6 +8,10 @@ The Raspberry Pi 5 uses a new GPIO controller that is **not compatible with `RPi
 
 This version replaces `RPi.GPIO` with **`gpiod` (libgpiod)**, the officially supported GPIO access method in Raspberry Pi OS (Bookworm and newer).
 
+Now, version 2.0.0 of `tm1637-rpi5-gpiod`, auto-detects whether libgpiod v1 or v2 is present and uses the appropriate backend:
+- libgpiod v1 (legacy API): per-line requests
+- libgpiod v2 (new API): `LineSettings` + `request_lines()` + `LineRequest.set_value()`
+
 ## 📥 Installation
 
 1. **Install required dependencies**:
@@ -69,18 +73,14 @@ while True:
 
 This project is licensed under the **MIT License**.
 
-## 💖 Donaciones
+## 💖 Donations
 
-Si encuentras este proyecto útil y quieres apoyar su desarrollo y mantenimiento, considera hacer una donación.  
-Tu contribución ayuda a seguir mejorando y manteniendo este software libre.
+If you find this project useful and want to support its development and maintenance, please consider making a donation.  
+Your contribution helps us continue improving and maintaining this free software.
 
 ### 💸 PayPal
-Puedes donar fácilmente mediante PayPal haciendo clic en el siguiente botón:
+You can easily donate via PayPal by clicking the button below:
 
 [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?business=95M7L3UZENS6Q&no_recurring=0&currency_code=EUR)
 
-### ₿ Criptomonedas
-**Bitcoin (BTC):** `13Sp4LwbDC1NQv17p3NN9w2yodog8KGtda`  
-**Ethereum (ETH):** `0x1939f4ba76adc18378533965857494e5f19ef4a4`
-
-Gracias por tu apoyo 🙏
+Thank you for your support. 🙏
